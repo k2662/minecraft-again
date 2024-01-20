@@ -30,16 +30,8 @@ FRAMEWORKS += -framework Metal
 FRAMEWORKS += -framework CoreFoundation
 FRAMEWORKS += -framework IOKit
 
-BGFX_TARGET =
-
-ifeq ($(UNAME_S), Darwin)
-	LDFLAGS += $(FRAMEWORKS)
+LDFLAGS += $(FRAMEWORKS)
 	# TODO: select based on ($ arch)
-endif
-
-ifeq ($(UNAME_S), Linux)
-	BGFX_TARGET=linux
-endif
 
 SRC  = $(shell find src -name "*.cpp")
 OBJ  = $(SRC:.cpp=.o)
