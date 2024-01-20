@@ -35,8 +35,6 @@ BGFX_TARGET =
 ifeq ($(UNAME_S), Darwin)
 	LDFLAGS += $(FRAMEWORKS)
 	# TODO: select based on ($ arch)
-	BGFX_DEPS_TARGET=osx-arm64
-	BGFX_TARGET=osx-arm
 endif
 
 ifeq ($(UNAME_S), Linux)
